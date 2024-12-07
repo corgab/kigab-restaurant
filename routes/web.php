@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\DishController;
 
 
 Route::get('/', function () {
@@ -36,7 +36,7 @@ Route::prefix('admin')->middleware('auth', 'verified')->group(function () {
     Route::get('/', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
-    Route::resource('products', ProductController::class);
+    Route::resource('dishes', DishController::class);
 
 });
 

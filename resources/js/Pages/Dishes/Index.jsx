@@ -1,9 +1,9 @@
 import { Head } from "@inertiajs/react";
 import Layout from "@/Layouts/AuthenticatedLayout";
 
-const Index = ({ products }) => {
-    if (!Array.isArray(products)) {
-        products = [];
+const Index = ({ dishes }) => {
+    if (!Array.isArray(dishes)) {
+        dishes = [];
     }
 
     return (
@@ -14,12 +14,12 @@ const Index = ({ products }) => {
                 </h2>
             }
         >
-            <Head title="Products" />
-            {products.length > 0 ? (
+            <Head title="Dishes" />
+            {dishes.length > 0 ? (
                 <ul>
-                    {products.map((product) => (
-                        <li key={product.id} className="mb-2">
-                            <strong>{product.name}</strong>: €{product.price}
+                    {dishes.map((dish) => (
+                        <li key={dish.id} className="mb-2">
+                            <strong>{dish.name}</strong>: €{dish.price}
                         </li>
                     ))}
                 </ul>
