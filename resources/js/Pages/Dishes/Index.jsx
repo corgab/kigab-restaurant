@@ -10,11 +10,12 @@ const Index = ({ dishes }) => {
         <Layout
             header={
                 <h2 className="text-xl font-semibold leading-tight text-gray-800">
-                    Prodotti
+                    Piatti
                 </h2>
             }
         >
             <Head title="Dishes" />
+
             {dishes.length > 0 ? (
                 <ul>
                     {dishes.map((dish) => (

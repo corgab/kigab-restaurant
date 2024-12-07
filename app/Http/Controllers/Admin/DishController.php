@@ -27,7 +27,7 @@ class DishController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Dishes/Create');
     }
 
     /**
@@ -35,7 +35,28 @@ class DishController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'price' => 'required|numeric|min:0',
+            'category' => 'required|string|max:255',
+            'image_path' => 'nullable|image|max:2048',
+
+        ]);
+
+        $dish = Dish::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'price' => $request->price,
+            'category' => $request->category,
+            'image_path' => $request->hasFile('image_path') 
+                ? $request->file('image_path')->store('dishes', 'public') 
+                : null,
+        ]);
+
+
+        return redirect()->route('dishes.index');
+
     }
 
     /**

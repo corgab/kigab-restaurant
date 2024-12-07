@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('description'); // Descrizione del piatto
             $table->decimal('price', 8, 2); // Prezzo del piatto
             $table->string('category'); // Categoria del piatto (es. antipasti, primi, secondi, ecc.)
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }
