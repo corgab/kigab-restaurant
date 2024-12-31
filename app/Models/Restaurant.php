@@ -14,7 +14,8 @@ class Restaurant extends Model
         'address',
         'phone',
         'email',
-        'description'
-
+        'description',
+        'image_path',
+        'image_name'
     ];
 }

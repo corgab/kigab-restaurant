@@ -23,13 +23,15 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 });
 
 // Ristoranti
+Route::resource('restaurants', RestaurantController::class)->except(['create','delete','show']);
+
+
 // Route::middleware('auth:sanctum')->group(function () {
-    Route::post('/restaurants', [RestaurantController::class, 'store']);
-    Route::put('/restaurants/{restaurant}', [RestaurantController::class, 'update']);
-    Route::patch('/restaurants/{restaurant}', [RestaurantController::class, 'update']);
-    Route::delete('/restaurants/{restaurant}', [RestaurantController::class, 'destroy']);
+    // Route::post('/restaurants', [RestaurantController::class, 'store']); Deve poter modificare non creare !!
+    // Route::put('/restaurants/{restaurant}', [RestaurantController::class, 'update']);
+    // Route::delete('/restaurants/{restaurant}', [RestaurantController::class, 'destroy']);
 // });
-Route::get('/restaurants', [RestaurantController::class, 'index']);
+// Route::get('/restaurants', [RestaurantController::class, 'index']);
 
 // Sezioni
 Route::middleware('auth:sanctum')->group(function () {
@@ -39,7 +41,7 @@ Route::resource('sections', SectionController::class)->only(['index', 'show']);
 
 // Route::middleware('auth:sanctum')->group(function () {
 Route::get('pages', [PageController::class, 'index']);
-    Route::put('pages/{slug}', [PageController::class, 'update']);
+Route::put('pages/{slug}', [PageController::class, 'update']);
 // });
 Route::get('pages/{slug}', [PageController::class, 'show']);
 

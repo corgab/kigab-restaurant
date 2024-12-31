@@ -14,6 +14,16 @@ class GalleryController extends Controller
     public function index()
     {
         $galleries = Gallery::all();
+    
+        // Su ogni galleria e aggiungi l'url dell'immagine
+        foreach ($galleries as $gallery) {
+            if ($gallery->path) {
+                // Url completo
+                $gallery->image_url = asset('storage/galleries/' . basename($gallery->path));
+            }
+        }
+    
+        // Restituisci la collezione modificata
         return response()->json($galleries);
     }
 
@@ -32,25 +42,20 @@ class GalleryController extends Controller
     {
         // Validazione della richiesta
         $request->validate([
-            'title' => 'required|string|max:255',
-            'filename' => 'required|string|max:255',
+            'title' => 'nullable|string|max:255',
             'path' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        // Controlla se il file è stato ricevuto
         if ($request->hasFile('path')) {
-            // Salvataggio dell'immagine nella cartella 'public/galleries'
+            // Salvataggio dell'immagine
             $imagePath = $request->file('path')->store('public/galleries');
-            $filename = basename($imagePath);
 
             // Salvataggio dei dettagli nel database
             $gallery = new Gallery();
             $gallery->title = $request->input('title');
-            $gallery->filename = $filename;
             $gallery->path = $imagePath;
             $gallery->save();
 
-            // Restituisce una risposta JSON di successo
             return response()->json(['message' => 'Immagine salvata con successo!', 'data' => $gallery], 201);
         }
 

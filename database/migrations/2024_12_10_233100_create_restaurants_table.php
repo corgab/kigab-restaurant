@@ -18,6 +18,11 @@ return new class extends Migration
             $table->string('phone');
             $table->string('email')->nullable();
             $table->text('description')->nullable();
+
+            // Immagine + ico
+            $table->string('image_name')->nullable();
+            $table->string('image_path')->nullable();
+            
             $table->timestamps();
         });
     }
