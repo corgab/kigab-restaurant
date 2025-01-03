@@ -23,7 +23,7 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 });
 
 // Ristoranti
-Route::resource('restaurants', RestaurantController::class)->except(['create','delete','show']);
+Route::resource('restaurants', RestaurantController::class)->except(['create','delete','index']);
 
 
 // Route::middleware('auth:sanctum')->group(function () {

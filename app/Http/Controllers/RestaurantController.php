@@ -17,14 +17,7 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        $restaurant = Restaurant::firstOrFail();
 
-        if ($restaurant->image_path) {
-            // Costruisce l'URL completo usando il metodo asset
-            $restaurant->image_url = asset('storage/' . $restaurant->image_path);
-        }
-        
-        return response()->json($restaurant);
     }
 
     /**
@@ -32,6 +25,13 @@ class RestaurantController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
+        $restaurant = Restaurant::firstOrFail();
+
+        if ($restaurant->image_path) {
+            // Costruisce l'URL completo usando il metodo asset
+            $restaurant->image_url = asset('storage/' . $restaurant->image_path);
+        }
+        
         return response()->json($restaurant);
     }
 

@@ -37,6 +37,12 @@ class SectionController extends Controller
      */
     public function show(Section $section)
     {
+
+        if($section->image) {
+            $section->image_url = asset('storage/sections/' . basename($section->image));
+
+        }
+
         return response()->json($section);
     }
 
