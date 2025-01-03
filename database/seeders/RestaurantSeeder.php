@@ -20,7 +20,7 @@ class RestaurantSeeder extends Seeder
             'email' => 'restaurant@test.it',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ipsum voluptatem dicta sit, unde voluptatum quasi cumque, iure quis tenetur commodi autem, quo voluptate aliquid explicabo amet aliquam nihil aspernatur.',
             'image_name' => null,
-            'image_path' => 'storage/restaurants/test.svg'
+            'image_path' => 'restaurants/test.svg'
         ]);
     }
 }
