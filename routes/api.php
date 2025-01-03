@@ -37,7 +37,9 @@ Route::resource('restaurants', RestaurantController::class)->except(['create','d
 Route::middleware('auth:sanctum')->group(function () {
     Route::resource('sections', SectionController::class)->only('destroy');
 });
-Route::resource('sections', SectionController::class)->only(['index', 'show']);
+
+Route::get('sections', [SectionController::class, 'index']);
+Route::get('sections/{section:slug}', [SectionController::class, 'show']);
 
 // Route::middleware('auth:sanctum')->group(function () {
 Route::get('pages', [PageController::class, 'index']);
