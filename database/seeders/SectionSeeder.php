@@ -35,6 +35,13 @@ class SectionSeeder extends Seeder
                 'content' => 'Questa sezione raccoglie tutte le recensioni dei nostri clienti, che riflettono la loro esperienza con noi e la qualità del nostro cibo e servizio.',
                 'image' => null,
             ],
+            [
+                'slug' => 'our menu',
+                'title' => 'Sfoglia il nostro menu',
+                'content' => 'Scarica il nostro menu completo in formato PDF.',
+                'image' => null,
+
+            ]
         ];
         
         foreach($sections as $section)

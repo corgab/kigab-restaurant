@@ -11,6 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
+
+        // Rimuovere i nullable che servono
         Schema::create('restaurants', function (Blueprint $table) {
             $table->id(); 
             $table->string('name');
@@ -22,6 +24,8 @@ return new class extends Migration
             // Immagine + ico
             $table->string('image_name')->nullable();
             $table->string('image_path')->nullable();
+            
+            $table->string('menu')->nullable();
             
             $table->timestamps();
         });

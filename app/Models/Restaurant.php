@@ -16,6 +16,7 @@ class Restaurant extends Model
         'email',
         'description',
         'image_path',
-        'image_name'
+        'image_name',
+        'menu'
     ];
 }

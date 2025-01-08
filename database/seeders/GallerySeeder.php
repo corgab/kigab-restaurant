@@ -26,6 +26,23 @@ class GallerySeeder extends Seeder
                 'title' => 'Third Gallery Image',
                 'path' => 'storage/galleries/test.png',
             ],
+            [
+                'title' => '4 Gallery Image',
+                'path' => 'storage/galleries/test.png',
+            ],
+            [
+                'title' => '5 Gallery Image',
+                'path' => 'storage/galleries/test.png',
+            ],
+            [
+                'title' => '6 Gallery Image',
+                'path' => 'storage/galleries/test.png',
+            ],
+            [
+                'title' => '7 Gallery Image',
+                'path' => 'storage/galleries/test.png',
+            ],
+
         ];
 
         foreach($galleries as $gallery) {
