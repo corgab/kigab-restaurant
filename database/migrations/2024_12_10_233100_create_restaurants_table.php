@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('image_path')->nullable();
             
             $table->string('menu')->nullable();
+            $table->text('map_link')->nullable();
             
             $table->timestamps();
         });

@@ -17,6 +17,7 @@ class Restaurant extends Model
         'description',
         'image_path',
         'image_name',
-        'menu'
+        'menu',
+        'map_link'
     ];
 }
