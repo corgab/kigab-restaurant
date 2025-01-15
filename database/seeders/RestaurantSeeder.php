@@ -18,7 +18,7 @@ class RestaurantSeeder extends Seeder
             'address' => 'via italia 10',
             'phone' => '+39 333 333 3333',
             'email' => 'support@craftedhub.it',
-            'description' => `celebra i sapori tradizionali rivisitati con un tocco innovativo, soddisfacendo ogni palato, anche quello dei clienti vegetariani e vegani. L'atmosfera elegante e accogliente è perfetta per ogni occasione, dal pranzo informale alla cena speciale. Il nostro servizio attento e professionale completa un'esperienza gastronomica indimenticabile`,
+            'description' => "Celebrate traditional flavors revisited with an innovative touch, satisfying every palate, even that of vegetarian and vegan customers. The elegant and welcoming atmosphere is perfect for any occasion, from informal lunch to special dinner. Our attentive and professional service completes an unforgettable gastronomic experience",
             'image_name' => null,
             'image_path' => 'restaurants/test.svg',
             'menu' => 'restaurants/menu.pdf',
