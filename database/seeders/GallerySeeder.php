@@ -15,33 +15,17 @@ class GallerySeeder extends Seeder
     {
         $galleries = [
             [
-                'title' => 'First Gallery Image',
-                'path' => 'storage/galleries/test.png',
+                'title' => '1 Gallery Image',
+                'path' => 'storage/galleries/1.jpg',
             ],
             [
-                'title' => 'Second Gallery Image',
-                'path' => 'storage/galleries/test.png',
+                'title' => '2 Gallery Image',
+                'path' => 'storage/galleries/2.jpg',
             ],
             [
-                'title' => 'Third Gallery Image',
-                'path' => 'storage/galleries/test.png',
-            ],
-            [
-                'title' => '4 Gallery Image',
-                'path' => 'storage/galleries/test.png',
-            ],
-            [
-                'title' => '5 Gallery Image',
-                'path' => 'storage/galleries/test.png',
-            ],
-            [
-                'title' => '6 Gallery Image',
-                'path' => 'storage/galleries/test.png',
-            ],
-            [
-                'title' => '7 Gallery Image',
-                'path' => 'storage/galleries/test.png',
-            ],
+                'title' => '3 Gallery Image',
+                'path' => 'storage/galleries/3.jpg',
+            ]
 
         ];
 

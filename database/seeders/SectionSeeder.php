@@ -19,30 +19,30 @@ class SectionSeeder extends Seeder
         $sections = [
             [
                 'slug' => 'hero section',
-                'title' => 'Sezione Home',
-                'content' => 'Questo è il contenuto per la sezione Home.',
-                'image' => 'public/sections/test.png',
+                'title' => 'Welcome',
+                'content' => 'Welcome to our restaurant. Enjoy a memorable dining experience with our delicious dishes and welcoming atmosphere.',
+                'image' => 'public/sections/hero.png',
             ],
             [
                 'slug' => 'about us',
-                'title' => 'Chi Siamo',
-                'content' => 'Scopri di più su di noi in questa sezione.',
-                'image' => 'public/sections/test.png',
+                'title' => 'About Us',
+                'content' => 'Learn more about our history, values, and commitment to providing high-quality, fresh ingredients and exceptional service.',
+                'image' => 'public/sections/about-us.jpg',
             ],
             [
                 'slug' => 'testimonials',
-                'title' => 'Recensioni',
-                'content' => 'Questa sezione raccoglie tutte le recensioni dei nostri clienti, che riflettono la loro esperienza con noi e la qualità del nostro cibo e servizio.',
+                'title' => 'Customer Reviews',
+                'content' => 'This section features reviews from our valued customers, sharing their experiences and appreciation for our food and service.',
                 'image' => null,
             ],
             [
                 'slug' => 'our menu',
-                'title' => 'Sfoglia il nostro menu',
-                'content' => 'Scarica il nostro menu completo in formato PDF.',
+                'title' => 'Explore Our Menu',
+                'content' => 'Download our full menu in PDF format and discover the variety of dishes we offer, from appetizers to desserts.',
                 'image' => null,
-
             ]
         ];
+        
         
         foreach($sections as $section)
         Section::create([
