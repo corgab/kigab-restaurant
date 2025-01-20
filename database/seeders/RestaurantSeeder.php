@@ -14,7 +14,7 @@ class RestaurantSeeder extends Seeder
     public function run(): void
     {
         Restaurant::create([
-            'name' => 'Ristorante CRAFTEDHUB',
+            'name' => "CRAFTEDHUB",
             'address' => 'via italia 10',
             'phone' => '+39 333 333 3333',
             'email' => 'support@craftedhub.it',
