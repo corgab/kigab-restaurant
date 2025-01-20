@@ -19,26 +19,26 @@ class SectionSeeder extends Seeder
         $sections = [
             [
                 'slug' => 'hero section',
-                'title' => 'Welcome',
-                'content' => 'Welcome to our restaurant. Enjoy a memorable dining experience with our delicious dishes and welcoming atmosphere.',
+                'title' => 'Benvenuto',
+                'content' => "Benvenuti al nostro ristorante. Godetevi un'esperienza culinaria memorabile con i nostri deliziosi piatti e l'atmosfera accogliente.",
                 'image' => 'public/sections/hero.png',
             ],
             [
                 'slug' => 'about us',
-                'title' => 'About Us',
-                'content' => 'Learn more about our history, values, and commitment to providing high-quality, fresh ingredients and exceptional service.',
+                'title' => 'Chi siamo',
+                'content' => "Scopri di più sulla nostra storia, sui nostri valori e sul nostro impegno nel fornire ingredienti freschi e di alta qualità e un servizio eccezionale.",
                 'image' => 'public/sections/about-us.jpg',
             ],
             [
                 'slug' => 'testimonials',
-                'title' => 'Customer Reviews',
-                'content' => 'This section features reviews from our valued customers, sharing their experiences and appreciation for our food and service.',
+                'title' => 'Recensioni dei clienti',
+                'content' => 'In questa sezione sono presenti le recensioni dei nostri stimati clienti, che condividono le loro esperienze e il loro apprezzamento per il nostro cibo e il nostro servizio.',
                 'image' => null,
             ],
             [
                 'slug' => 'our menu',
-                'title' => 'Explore Our Menu',
-                'content' => 'Download our full menu in PDF format and discover the variety of dishes we offer, from appetizers to desserts.',
+                'title' => 'Esplora il nostro menu',
+                'content' => 'Scarica il nostro menù completo in formato PDF e scopri la varietà dei piatti che proponiamo, dagli antipasti ai dessert.',
                 'image' => null,
             ]
         ];
